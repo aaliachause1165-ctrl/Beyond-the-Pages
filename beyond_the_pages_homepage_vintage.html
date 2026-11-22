@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond The Pages — Stories worth staying for.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Lora:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+ --espresso:#38251F;--burgundy:#702C3B;--cream:#F5EBDD;--parchment:#E7D7BE;
+ --olive:#77785B;--rose:#B98783;--gold:#B08A52;--ink:#4A3830;--paper:#F8F0E3;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;color:var(--espresso);font-family:'Lora',Georgia,serif;line-height:1.7;
+ background-color:var(--cream);
+ background-image:radial-gradient(rgba(91,59,37,.075) .65px,transparent .65px),linear-gradient(110deg,rgba(255,255,255,.24),transparent 42%,rgba(128,82,49,.035));
+ background-size:7px 7px,100% 100%;
+}
+a{color:inherit;text-decoration:none}
+.topline{height:5px;background:linear-gradient(90deg,var(--espresso),var(--burgundy),var(--gold),var(--burgundy),var(--espresso))}
+header{
+ max-width:1360px;margin:auto;padding:20px 5.5% 17px;display:flex;align-items:center;
+ justify-content:space-between;gap:30px;border-bottom:1px solid rgba(176,138,82,.58);
+}
+.brand{display:flex;flex-direction:column;line-height:1;min-width:0}
+.brand-heading{display:flex;align-items:center;gap:9px}
+.brand-name{font-family:'Pinyon Script','Allura',cursive;font-size:clamp(43px,5.4vw,72px);font-weight:400;letter-spacing:0;color:var(--burgundy);white-space:nowrap}
+.brand-feather{width:clamp(42px,5vw,68px);height:auto;flex:none;transform:rotate(7deg);color:#96683F}
+.brand-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(15px,1.6vw,21px);text-align:center;color:var(--espresso);margin-top:1px}
+.brand-descriptor{font:10px 'Montserrat',sans-serif;letter-spacing:.22em;text-transform:uppercase;text-align:center;color:var(--burgundy);margin-top:8px}
+nav{display:flex;gap:25px;align-items:center;font:500 10px 'Montserrat',sans-serif;letter-spacing:.13em;text-transform:uppercase}
+nav a{padding:8px 0;border-bottom:1px solid transparent}
+nav a:hover{border-color:var(--gold);color:var(--burgundy)}
+.nav-cta{border:1px solid var(--gold);padding:9px 14px!important}
+.hero{
+ min-height:550px;color:var(--cream);display:flex;align-items:center;justify-content:center;text-align:center;
+ padding:82px 7%;position:relative;overflow:hidden;
+ background:linear-gradient(90deg,rgba(35,19,14,.66),rgba(42,21,15,.56),rgba(35,19,14,.48)),
+ url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=2000&q=88') center 52%/cover;
+}
+.hero:before{content:"";position:absolute;inset:14px;border:1px solid rgba(225,190,128,.72);pointer-events:none}
+.hero:after{content:"";position:absolute;inset:23px;border:1px solid rgba(225,190,128,.22);pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:760px}
+.eyebrow{font:500 10px 'Montserrat',sans-serif;text-transform:uppercase;letter-spacing:.24em;color:var(--gold)}
+.hero .eyebrow{color:#E9C98F}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.04;margin:0}
+h1{font-size:clamp(58px,8vw,104px);font-style:italic;max-width:760px;margin:20px auto 16px;text-shadow:0 2px 15px rgba(0,0,0,.2)}
+.hero-ornament{width:min(290px,70%);height:20px;margin:14px auto 15px;display:flex;align-items:center;gap:10px;color:#D4A85E}
+.hero-ornament:before,.hero-ornament:after{content:"";height:1px;background:linear-gradient(90deg,transparent,#D4A85E);flex:1}
+.hero-ornament:after{transform:scaleX(-1)}
+.hero-ornament span{font-size:20px;line-height:1}
+.hero p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,2.6vw,31px);margin:0;color:#F6EBDD}
+.button{display:inline-block;background:var(--burgundy);color:#F4D18B;border:1px solid #D5AD69;padding:13px 24px;margin-top:24px;font:500 10px 'Montserrat',sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:.2s}
+.button:hover{background:#4C1D28;color:#fff1d4}
+section{padding:76px 6%}
+.section-inner{max-width:1160px;margin:auto}
+.section-head{text-align:center;margin-bottom:36px}
+.section-head h2{font-size:clamp(42px,5vw,64px);font-style:italic;color:var(--burgundy);margin:10px 0 5px}
+.section-head p{color:var(--ink);max-width:650px;margin:0 auto;font-size:14px}
+.section-rule{display:flex;align-items:center;gap:22px;margin:0 auto 5px;color:var(--gold)}
+.section-rule:before,.section-rule:after{content:"";height:1px;background:var(--gold);flex:1}
+.section-rule span{font-size:16px}
+.featured{background:rgba(255,250,241,.7);border-top:1px solid rgba(176,138,82,.45);border-bottom:1px solid rgba(176,138,82,.45)}
+.feature-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.feature-image{
+ min-height:355px;border:7px solid #F0E2CC;outline:1px solid rgba(176,138,82,.75);
+ background:linear-gradient(145deg,rgba(56,37,31,.05),rgba(56,37,31,.12)),url('https://images.unsplash.com/photo-1455390582262-044c8097b8e7?auto=format&fit=crop&w=1100&q=85') center/cover;
+ box-shadow:0 10px 28px rgba(56,37,31,.16);position:relative
+}
+.feature-image:after{content:"A MOMENT BETWEEN THE LINES";position:absolute;bottom:14px;left:14px;color:white;background:rgba(56,37,31,.68);padding:7px 10px;font:9px 'Montserrat',sans-serif;letter-spacing:.18em}
+.feature-copy .eyebrow{color:var(--burgundy)}
+.feature-copy h3{font-size:clamp(40px,5vw,58px);font-style:italic;margin:13px 0;color:var(--espresso)}
+.feature-copy p{color:var(--ink);font-size:15px}
+.read-link{display:inline-block;margin-top:15px;color:var(--burgundy);font:500 10px 'Montserrat',sans-serif;letter-spacing:.15em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:5px}
+.categories{background-color:var(--parchment);background-image:radial-gradient(rgba(91,59,37,.08) .7px,transparent .7px);background-size:8px 8px}
+.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.category{min-height:220px;padding:0 0 20px;background:rgba(250,243,231,.88);border:1px solid rgba(176,138,82,.7);display:flex;flex-direction:column;text-align:center;transition:.2s;box-shadow:0 5px 16px rgba(56,37,31,.07)}
+.category:hover{transform:translateY(-4px);background:#FFF9EF;box-shadow:0 12px 22px rgba(56,37,31,.12)}
+.category-photo{height:132px;background-position:center;background-size:cover;border-bottom:1px solid var(--gold)}
+.category .num{font:9px 'Montserrat',sans-serif;letter-spacing:.16em;color:var(--olive);margin:14px 0 4px}
+.category h3{font-size:30px;font-style:italic;color:var(--burgundy)}
+.category p{font-size:12px;color:var(--ink);margin:5px 12px 0}
+.reading-room{background:linear-gradient(100deg,rgba(61,20,28,.96),rgba(112,44,59,.96)),url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=1500&q=80') center/cover;color:var(--cream);text-align:center;position:relative}
+.reading-room:before{content:"";position:absolute;inset:12px;border:1px solid rgba(213,173,105,.8);pointer-events:none}
+.reading-room .section-inner{position:relative}
+.reading-room .section-head{margin-bottom:0}
+.reading-room .section-head h2{color:#F3DFC1}
+.reading-room .section-head p{color:#E7D7BE}
+.reading-room .eyebrow{color:#E5C58F}
+.reading-room .button{background:transparent;color:#F3D18B}
+.note{font-size:10px;color:#E7D7BE;margin-top:15px}
+.newsletter{background:var(--cream);text-align:center}
+.newsletter h2{font-size:clamp(44px,5vw,64px);margin:10px 0;color:var(--burgundy)}
+.newsletter p{max-width:620px;margin:0 auto;color:var(--ink);font-size:14px}
+.newsletter-form{display:flex;justify-content:center;gap:10px;margin:22px auto 0;max-width:580px}
+.newsletter-form input{min-width:0;flex:1;padding:13px 15px;border:1px solid var(--gold);background:rgba(255,250,241,.72);font:13px 'Lora',serif;color:var(--espresso)}
+.newsletter-form button{border:1px solid var(--gold);background:var(--burgundy);color:var(--cream);padding:0 20px;font:10px 'Montserrat',sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.about{background:#F8F0E3;border-top:1px solid rgba(176,138,82,.5)}
+.about-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:55px;align-items:center}
+.about-mark{background:linear-gradient(145deg,#EAD9BF,#F6EBDD);padding:48px 25px;text-align:center;border:1px solid var(--gold);outline:1px solid rgba(176,138,82,.4);outline-offset:6px}
+.about-mark .initials{font:italic 100px 'Cormorant Garamond',serif;color:var(--burgundy);line-height:1}
+.about-mark .caption{font:9px 'Montserrat',sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.about-copy h2{font-size:clamp(42px,5vw,58px);font-style:italic;color:var(--burgundy);margin:12px 0 20px}
+.about-copy p{color:var(--ink);font-size:14px}
+.signature{font:italic 24px 'Cormorant Garamond',serif;color:var(--burgundy);margin-top:18px}
+.signature small{display:block;font:9px 'Montserrat',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);margin-top:4px}
+footer{background:linear-gradient(115deg,#2B1A15,#45251E 55%,#2B1A15);color:var(--cream);padding:42px 6% 28px;text-align:center;border-top:4px solid var(--gold)}
+.footer-brand{font:clamp(38px,5vw,58px) 'Pinyon Script',cursive;color:#F6EBDD;line-height:1.2}
+footer .footer-tag{font:10px 'Montserrat',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D6AD69}
+footer .footer-nav{margin:22px 0;display:flex;gap:23px;justify-content:center;flex-wrap:wrap;font:9px 'Montserrat',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+footer .copyright{font-size:11px;color:#CDBBA4;border-top:1px solid rgba(176,138,82,.55);padding-top:17px;margin-top:20px}
+@media(max-width:820px){
+ header{align-items:center;flex-direction:column;padding:18px 5%}
+ nav{gap:16px;flex-wrap:wrap;justify-content:center}
+ .hero{min-height:500px}
+ .feature-grid,.about-grid{grid-template-columns:1fr}
+ .feature-image{min-height:280px}
+ .category-grid{grid-template-columns:repeat(2,1fr)}
+ section{padding:62px 7%}
+}
+@media(max-width:480px){
+ .brand-name{font-size:44px}.brand-feather{width:42px}
+ nav{gap:11px;font-size:9px}
+ .hero{min-height:460px;padding:70px 9%}
+ h1{font-size:57px}
+ .category-grid{grid-template-columns:1fr}
+ .category{min-height:205px}
+ .newsletter-form{flex-direction:column}
+ .newsletter-form button{padding:13px}
+}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+  <a class="brand" href="#home" aria-label="Beyond The Pages home">
+    <span class="brand-heading">
+      <span class="brand-name">Beyond The Pages</span>
+      <svg class="brand-feather" viewBox="0 0 90 110" role="img" aria-label="Decorative feather">
+        <path d="M13 94 C35 66 55 34 79 8 C70 38 49 73 13 94Z" fill="currentColor" opacity=".92"/>
+        <path d="M13 94 C34 68 54 38 79 8 M25 80 L15 64 M34 68 L22 48 M44 55 L35 34 M54 42 L51 23 M63 30 L66 15 M28 77 L47 79 M39 63 L60 66 M50 49 L70 51 M60 36 L77 37" fill="none" stroke="#F5EBDD" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M12 95 C27 99 43 102 61 99" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="brand-tag">Where every word has a story.</span>
+    <span class="brand-descriptor">A journal of words &amp; ideas</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a><a href="#read">Read</a><a href="#categories">Categories</a><a href="#about">About</a><a class="nav-cta" href="#membership">Subscribe</a>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">An independent literary journal</div>
+    <h1>Stories worth staying for.</h1>
+    <div class="hero-ornament"><span>✧</span></div>
+    <p>Where every word has a story.</p>
+    <a class="button" href="#read">Explore the library&nbsp; →</a>
+  </div>
+</section>
+<section class="featured" id="read">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-rule"><span>✧</span></div>
+      <h2>Between the lines</h2>
+      <div class="eyebrow">A selection of writing</div>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-image" role="img" aria-label="A vintage writing desk"></div>
+      <div class="feature-copy">
+        <div class="eyebrow">Featured writing · Sample slot</div>
+        <h3>The Art of Noticing</h3>
+        <p>A reflective essay about the small details that make ordinary days memorable. This is a placeholder for your first featured piece.</p>
+        <a class="read-link" href="#categories">Discover the library&nbsp; →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="categories" id="categories">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">Find your next read</div>
+      <h2>Explore the library</h2>
+      <p>Different shelves, different subjects — all written and curated by one writer.</p>
+    </div>
+    <div class="category-grid">
+      <a class="category" href="#read"><div class="category-photo" style="background-image:url('https://images.unsplash.com/photo-1455390582262-044c8097b8e7?auto=format&fit=crop&w=700&q=80')"></div><span class="num">01 / REFLECTION</span><div><h3>The Essay Room</h3><p>Thoughts, reflections and observations.</p></div></a>
+      <a class="category" href="#read"><div class="category-photo" style="background-image:url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=700&q=80')"></div><span class="num">02 / IDEAS</span><div><h3>The Editorial</h3><p>Articles, opinions and ideas.</p></div></a>
+      <a class="category" href="#read"><div class="category-photo" style="background-image:url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=700&q=80')"></div><span class="num">03 / IMAGINATION</span><div><h3>Fiction &amp; Folklore</h3><p>Stories born from imagination.</p></div></a>
+      <a class="category" href="#read"><div class="category-photo" style="background-image:url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=700&q=80')"></div><span class="num">04 / POETRY</span><div><h3>The Poetry Corner</h3><p>Words, rhythm and expression.</p></div></a>
+      <a class="category" href="#read"><div class="category-photo" style="background-image:url('https://images.unsplash.com/photo-1455390582262-044c8097b8e7?auto=format&fit=crop&w=700&q=80')"></div><span class="num">05 / EXPRESSION</span><div><h3>Letters &amp; Speeches</h3><p>Words written to be shared and remembered.</p></div></a>
+      <a class="category" href="#read"><div class="category-photo" style="background-image:url('https://images.unsplash.com/photo-1512828999941-7b3f7f1c5c9f?auto=format&fit=crop&w=700&q=80')"></div><span class="num">06 / COLLECTIONS</span><div><h3>Reading Collections</h3><p>Curated writing gathered around a theme.</p></div></a>
+    </div>
+  </div>
+</section>
+<section class="reading-room" id="membership">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">For readers who wish to linger</div>
+      <h2>A little more to discover.</h2>
+      <p>Step into The Reading Room and discover exclusive collections, subscriber-only writing and more.</p>
+      <a class="button" href="#newsletter">Join the Reading Room&nbsp; →</a>
+      <div class="note">Membership is a planned feature — no payment or subscription is active on this preview.</div>
+    </div>
+  </div>
+</section>
+<section class="newsletter" id="newsletter">
+  <div class="section-inner">
+    <div class="section-rule"><span>✧</span></div>
+    <h2>Stay a little longer.</h2>
+    <p>Subscribe to our newsletter for new writing, reading recommendations and occasional notes from the editor.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('This is a visual preview. Newsletter sign-up will be connected when the website is published.');">
+      <input type="email" placeholder="Your email address" aria-label="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="section-inner about-grid">
+    <div class="about-mark"><div class="initials">B·P</div><div class="caption">Words &amp; ideas, thoughtfully gathered</div></div>
+    <div class="about-copy">
+      <div class="eyebrow">A note about this publication</div>
+      <h2>Beyond the pages, a world of words.</h2>
+      <p>Beyond The Pages began with a simple thought: writing is more than putting words together. It is a way to express ideas, explore imagination, share perspectives and see the world differently.</p>
+      <p>This independent, one-writer publication brings together thoughtful essays, informative articles, imaginative short stories and creative pieces. Each piece is written with curiosity and the hope of leaving readers with something to think about, discover or enjoy.</p>
+      <p>Whether you are here for a new perspective, an interesting article or a quiet moment with a story, I am glad you found your way here.</p>
+      <div class="signature">Founder, Writer &amp; Editor<small>Beyond The Pages</small></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="footer-brand">Beyond The Pages</div>
+  <div class="footer-tag">Where every word has a story.</div>
+  <div class="footer-nav"><a href="#home">Home</a><a href="#read">Read</a><a href="#categories">Categories</a><a href="#about">About</a><a href="#membership">Subscribe</a></div>
+  <div class="copyright">© 2026 Beyond The Pages · An independent one-writer publication</div>
+</footer>
+</body>
+</html>
